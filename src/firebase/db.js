@@ -13,8 +13,9 @@ var firebaseConfig = {
   measurementId: "G-6QGZKVBJCH",
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+export const db = firebase.initializeApp(firebaseConfig).firestore();
 
+// Export types that exists in Firestore
+// This is not always necessary, but it's used in other examples
 const { Timestamp, GeoPoint } = firebase.firestore;
 export { Timestamp, GeoPoint };

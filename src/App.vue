@@ -7,23 +7,24 @@
 
       <v-spacer></v-spacer>
 
-      
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <span class="mr-2">Latest Release</span>
+      <v-icon>mdi-open-in-new</v-icon>
     </v-app-bar>
 
     <v-main>
-      <HelloWorld />
+      <ToDoList />
     </v-main>
   </v-app>
 </template>
 
 <script>
+import ToDoList from "./components/ToDoList";
 export default {
   name: "App",
 
-  components: {},
+  components: {
+    ToDoList,
+  },
 
   data: () => ({
     //
